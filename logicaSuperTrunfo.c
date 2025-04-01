@@ -1,11 +1,7 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
-// Siga os comentários para implementar cada parte do desafio.
+int main (){
 
-int main() {
     char estadoA [3], estadoB [3];
     char nomedacidadeA [20], nomedacidadeB [20];
     unsigned long int populacaoA, populacaoB;
@@ -16,6 +12,7 @@ int main() {
     float PIBpercaptaA, PIBpercaptaB;
     float SuperpoderA, SuperpoderB;
     int resultadopopulacao, resultadoarea, resultadoPIB, resultadopontosturisticos, resultadodensidade, resultadoPIBpercapita, resultadosuperpoder;
+    int escolhajogador;
 
         //atribuicao das variaveis
 
@@ -95,15 +92,136 @@ int main() {
     printf("Carta 1 - %s - %s: %.2f \n", nomedacidadeB, estadoB, PIBpercaptaB);
 
     if (PIBpercaptaA > PIBpercaptaB){
-        printf("%s - %s venceu!", nomedacidadeA, estadoA);
+        printf("%s - %s venceu!\n\n", nomedacidadeA, estadoA);
         
     } else {
-        printf("%s - %s venceu!", nomedacidadeB, estadoB);
+        printf("%s - %s venceu!\n\n", nomedacidadeB, estadoB);
     }
     
         // foi escolhido o PIB per capita para a comparação 
-    
 
-        
+
+    
+    printf("### Escolha um atributo para ser comparado ###\n");
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Número de pontos turísticos\n");
+    printf("5. Densidade demografica\n");
+    printf("Escolha: ");
+    scanf("\n %d", &escolhajogador);
+
+        // Criado menu acima com escolhas 
+
+    switch (escolhajogador)
+    {
+    case 1:
+        if (populacaoA > populacaoB)
+        {
+            printf("Cidade %s e %s \n", nomedacidadeA, nomedacidadeB);
+            printf("O atributo utilizado na comparação é a População\n");
+            printf("Valor da cidade %s: %lu \nValor da cidade %s: %lu \n", nomedacidadeA, populacaoA, nomedacidadeB, populacaoB);
+            printf("Cidade %s vence\n", nomedacidadeA);
+        } else if (populacaoA < populacaoB)
+            {
+                printf("Cidade %s e %s \n", nomedacidadeA, nomedacidadeB);
+                printf("O atributo utilizado na comparação é a População\n");
+                printf("Valor da cidade %s: %lu \nValor da cidade %s: %lu \n", nomedacidadeA, populacaoA, nomedacidadeB, populacaoB);
+                printf("Cidade %s vence\n", nomedacidadeB);
+            } else 
+            {
+                printf("Empate\n");
+            }
+        break;
+    case 2:
+        if (areaemkmA > areaemkmB)
+        {
+            printf("Cidade %s e %s \n", nomedacidadeA, nomedacidadeB);
+            printf("O atributo utilizado na comparação é a Área\n");
+            printf("Valor da cidade %s: %.2f \nValor da cidade %s: %.2f \n", nomedacidadeA, areaemkmA, nomedacidadeB, areaemkmB);
+            printf("Cidade %s vence\n", nomedacidadeA);
+        } else if (areaemkmA < areaemkmB)
+            {
+                printf("Cidade %s e %s \n", nomedacidadeA, nomedacidadeB);
+                printf("O atributo utilizado na comparação é a Área\n");
+                printf("Valor da cidade %s: %.2f \nValor da cidade %s: %.2f \n", nomedacidadeA, areaemkmA, nomedacidadeB, areaemkmB);
+                printf("Cidade %s vence\n", nomedacidadeB);
+            } else 
+            {
+                printf("Empate\n");
+            }
+        break;    
+    case 3:
+            if (PIBA > PIBB)
+            {
+                printf("Cidade %s e %s \n", nomedacidadeA, nomedacidadeB);
+                printf("O atributo utilizado na comparação é o PIB\n");
+                printf("Valor da cidade %s: %.2f \nValor da cidade %s: %.2f \n", nomedacidadeA, PIBA, nomedacidadeB, PIBB);
+                printf("Cidade %s vence\n", nomedacidadeA);
+            } else if (PIBA < PIBB)
+                {
+                    printf("Cidade %s e %s \n", nomedacidadeA, nomedacidadeB);
+                    printf("O atributo utilizado na comparação é o PIB\n");
+                    printf("Valor da cidade %s: %.2f \nValor da cidade %s: %.2f \n", nomedacidadeA, PIBA, nomedacidadeB, PIBB);
+                    printf("Cidade %s vence\n", nomedacidadeB);
+                } else 
+                {
+                    printf("Empate\n");
+                }
+        break;
+    case 4:
+            if (numerodepontosturisticosA > numerodepontosturisticosB)
+            {
+                printf("Cidade %s e %s \n", nomedacidadeA, nomedacidadeB);
+                printf("O atributo utilizado na comparação é o número de pontos turísticos\n");
+                printf("Valor da cidade %s: %d \nValor da cidade %s: %d \n", nomedacidadeA, numerodepontosturisticosA, nomedacidadeB, numerodepontosturisticosB);
+                printf("Cidade %s vence\n", nomedacidadeA);
+            } else if (numerodepontosturisticosA < numerodepontosturisticosB)
+                {
+                    printf("Cidade %s e %s \n", nomedacidadeA, nomedacidadeB);
+                    printf("O atributo utilizado na comparação é o número do pontos turísticos\n");
+                    printf("Valor da cidade %s: %d \nValor da cidade %s: %d \n", nomedacidadeA, numerodepontosturisticosA, nomedacidadeB, numerodepontosturisticosB);
+                    printf("Cidade %s vence\n", nomedacidadeB);
+                } else 
+                {
+                    printf("Empate\n");
+                }
+        break;
+    case 5:
+            if (densidadepopulacionalA < densidadepopulacionalB)
+            {
+                printf("Cidade %s e %s \n", nomedacidadeA, nomedacidadeB);
+                printf("O atributo utilizado na comparação é a densidade populacional\n");
+                printf("Valor da cidade %s: %.2f \nValor da cidade %s: %.2f \n", nomedacidadeA, densidadepopulacionalA, nomedacidadeB, densidadepopulacionalB);
+                printf("Cidade %s vence\n", nomedacidadeA);
+            } else if (densidadepopulacionalA > densidadepopulacionalB)
+                {
+                    printf("Cidade %s e %s \n", nomedacidadeA, nomedacidadeB);
+                    printf("O atributo utilizado na comparação é densidade populacional\n");
+                    printf("Valor da cidade %s: %.2f \nValor da cidade %s: %.2f \n", nomedacidadeA, densidadepopulacionalA, nomedacidadeB, densidadepopulacionalB);
+                    printf("Cidade %s vence\n", nomedacidadeB);
+                } else 
+                {
+                    printf("Empate\n");
+                }
+        break;
+    
+    default:
+                printf("Selecione uma opção valida!");
+        break;
+    }
+
+
+
+
+
+
+
     return 0;
+
+
+
+
+
+
 }
