@@ -264,7 +264,7 @@ int main (){
 
     switch (segundoatributo)
     {
-        if (primeiroatributo == segundoatributo)
+        if (primeiroatributo = segundoatributo)
         {
             printf("\n\nVocê escolhou o mesmo atributo para ser comparado!\n");
         } else
