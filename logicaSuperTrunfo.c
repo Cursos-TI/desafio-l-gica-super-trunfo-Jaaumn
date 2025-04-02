@@ -262,37 +262,38 @@ int main (){
     printf("Escolha o segundo atributo: ");
     scanf("\n %d", &segundoatributo);
 
-    switch (segundoatributo)
-    {
-        if (primeiroatributo = segundoatributo)
+    if (primeiroatributo == segundoatributo)
         {
-            printf("\n\nVocê escolhou o mesmo atributo para ser comparado!\n");
+            printf("\n\nVocê escolheu o mesmo atributo para ser comparado!\n");
         } else
         {
-             case 1:
-                printf("\nVocê escolheu População! \n");
-                resultadosegundoatributo = populacaoA > populacaoB ? 1 : 0;
-                break;
-            case 2:
-                printf("\nVocê escolheu Área! \n");
-                resultadosegundoatributo = areaemkmA > areaemkmB ? 1 : 0;
-                break;
-            case 3:
-                printf("\nVocê escolheu PIB! \n");
-                resultadosegundoatributo = PIBA > PIBB ? 1 : 0;
-                break;
-            case 4:
-                printf("\nVocê escolheu Número de pontos turisticos! \n");
-                resultadosegundoatributo = numerodepontosturisticosA > numerodepontosturisticosB ? 1 : 0;
-                break;
-            case 5:
-                printf("\nVocê escolheu Densidade demografica! \n");
-                resultadosegundoatributo = densidadepopulacionalA < densidadepopulacionalB ? 1 : 0;
-                break;
+    
+    switch (segundoatributo)
+    {
+        case 1:
+            printf("\nVocê escolheu População! \n");
+            resultadosegundoatributo = populacaoA > populacaoB ? 1 : 0;
+            break;
+        case 2:
+            printf("\nVocê escolheu Área! \n");
+            resultadosegundoatributo = areaemkmA > areaemkmB ? 1 : 0;
+            break;
+         case 3:
+            printf("\nVocê escolheu PIB! \n");
+            resultadosegundoatributo = PIBA > PIBB ? 1 : 0;
+            break;
+        case 4:
+            printf("\nVocê escolheu Número de pontos turisticos! \n");
+            resultadosegundoatributo = numerodepontosturisticosA > numerodepontosturisticosB ? 1 : 0;
+            break;
+        case 5:
+            printf("\nVocê escolheu Densidade demografica! \n");
+            resultadosegundoatributo = densidadepopulacionalA < densidadepopulacionalB ? 1 : 0;
+            break;
             
-            default:
-                printf("\nOpção inválida\n");
-                break;
+        default:
+            printf("\nOpção inválida\n");
+            break;
             
             }
         }
